@@ -13,6 +13,11 @@ base_dir=$1
 cache_dir=$2
 env_dir=$3
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
+
+echo "do we have an env dir?"
+echo $env_dir
+echo $3
+
 export_env_dir() {
   env_dir=$3
   whitelist_regex=${2:-''}
@@ -27,6 +32,8 @@ export_env_dir() {
 }
 
 export_env_dir
+
+echo env
 
 build_dir=$build_dir/$GULP_DIR
 heroku_dir=$build_dir/.heroku
