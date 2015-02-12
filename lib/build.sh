@@ -189,8 +189,8 @@ function build_dependencies() {
       touch $build_dir/.npmrc
       npm install --quiet --userconfig $build_dir/.npmrc 2>&1 | indent
     fi
-    bower install
-    gulp
+    $build_dir/node_modules/.bin/bower install
+    $build_dir/node_modules/.bin/gulp build
   fi
 }
 
