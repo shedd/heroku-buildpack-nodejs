@@ -33,7 +33,8 @@ export_env_dir() {
 
 export_env_dir
 
-echo env
+echo `env`
+echo `ls -ltr $env_dir`
 
 build_dir=$build_dir/$GULP_DIR
 heroku_dir=$build_dir/.heroku
