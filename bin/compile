@@ -33,10 +33,10 @@ export_env_dir() {
 
 export_env_dir
 
-echo `env`
-echo `ls -ltr $env_dir`
+echo `ls -ltr $env_dir/*`
+echo $GULP_DIR
 
-build_dir=$build_dir/$GULP_DIR
+build_dir=$base_dir/$GULP_DIR
 heroku_dir=$build_dir/.heroku
 mkdir -p $heroku_dir/node
 warnings=$(mktemp)
